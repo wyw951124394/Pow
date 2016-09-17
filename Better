@@ -1,0 +1,22 @@
+bool IsEven(int N)
+{
+	return 0 == N % 2 ? true : false;
+}
+
+int Pow(int X, int N)
+{
+	if (N == 0)
+	{
+		return 1;
+	}
+	if (N == 1)
+	{
+		return X;
+	}
+	if (IsEven(N))
+	{
+		return Pow(X*X, N / 2);
+	}
+	else
+		return Pow(X*X, N / 2)*X;
+}
